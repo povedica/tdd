@@ -1,0 +1,19 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/3.7/phpunit.xsd"
+        backupGlobals="true"
+        backupStaticAttributes="false"
+        bootstrap="bootstrap.php"
+        cacheTokens="false"
+        colors="false"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="false">
+
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <file>Test.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
