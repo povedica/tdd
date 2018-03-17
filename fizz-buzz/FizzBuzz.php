@@ -6,7 +6,7 @@ class FizzBuzz
     {
     }
 
-    public function get_number_to_print($number)
+    private function get_number_to_print($number)
     {
         if ($this->is_fizz_buzz($number)) {
             $number = 'FizzBuzz';
@@ -20,12 +20,12 @@ class FizzBuzz
         return $number;
     }
 
-    public function is_fizz($number)
+    private function is_fizz($number)
     {
         return $this->is_divisible_by($number, 3) || $this->contains($number, 3);
     }
 
-    public function is_buzz($number)
+    private function is_buzz($number)
     {
         return $this->is_divisible_by($number, 5) || $this->contains($number, 5);
     }
@@ -40,7 +40,7 @@ class FizzBuzz
         return $number % $divisible == 0;
     }
 
-    public function is_fizz_buzz($number)
+    private  function is_fizz_buzz($number)
     {
         return ($this->is_divisible_by($number, 3) && $this->is_divisible_by($number, 5)) ||
             ($this->contains($number, 3) && $this->contains($number, 5));
