@@ -86,7 +86,8 @@ class Test_GildedRoses_Item extends TestCase
     {
         return array(
             array(10, 12),
-            array(11, 12)
+            array(11, 13),
+            array(12, 13)
         );
     }
 }
