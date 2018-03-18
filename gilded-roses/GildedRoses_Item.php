@@ -22,7 +22,13 @@ class GildedRoses_Item
 
     public function set_quality($quality)
     {
-        $this->quality = ($this->quality < 0) ? 0 : $quality;
+        if ($quality > 50) {
+            $quality = 50;
+        } elseif ($quality < 0) {
+            $quality = 0;
+        }
+
+        $this->quality = $quality;
     }
 
     public function decrease_quality()
