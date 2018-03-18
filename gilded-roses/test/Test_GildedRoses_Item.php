@@ -28,6 +28,12 @@ class Test_GildedRoses_Item extends TestCase
     {
         $this->item->decrease_quantity();
         $this->assertEquals(9, $this->item->get_quantity());
+    }
 
+    public function test_decrease_twice_faster_if_sellin_has_passed()
+    {
+        $this->item = new GildedRoses_Item(0,10);
+        $this->item->decrease_quantity();
+        $this->assertEquals(8, $this->item->get_quantity());
     }
 }

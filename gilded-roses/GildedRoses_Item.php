@@ -7,6 +7,7 @@ class GildedRoses_Item
 
     const DECREASE_SELLIN_UNITS_BY_DAY = 1;
     const DECREASE_QUANTITY_UNITS_BY_DAY = 1;
+    const MULTIPLIER_FACTOR_WHEN_SELLIN_HAS_PASSED = 2;
 
     public function __construct($sellin, $quantity)
     {
@@ -21,7 +22,8 @@ class GildedRoses_Item
 
     public function decrease_quantity()
     {
-        $this->quantity = $this->quantity - self::DECREASE_QUANTITY_UNITS_BY_DAY;
+        $multiplier_factor = ($this->get_sellin() <= 0) ? self::MULTIPLIER_FACTOR_WHEN_SELLIN_HAS_PASSED : self::DECREASE_QUANTITY_UNITS_BY_DAY;
+        $this->quantity = $this->quantity - ((self::DECREASE_QUANTITY_UNITS_BY_DAY) * $multiplier_factor);
     }
 
     public function get_sellin()
