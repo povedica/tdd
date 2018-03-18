@@ -90,6 +90,12 @@ class Test_GildedRoses_Item extends TestCase
         $this->assertEquals($expected, $this->item->get_quality());
     }
 
+    public function test_quality_drops_to_zero_when_sellin_has_passed(){
+        $this->item = new GildedRoses_Item_Backstage_Passes(1,10);
+        $this->item->decrease_sellin();
+        $this->assertEquals(0,$this->item->get_quality());
+    }
+
     /**
      * Provide set of data to test cases
      * @return array

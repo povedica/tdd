@@ -24,7 +24,13 @@ class GildedRoses_Item_Backstage_Passes extends GildedRoses_Item
             $factor = 1;
         }
 
-        $this->set_quality($this->quality + ((self::INCREASE_QUALITY_UNITS_WHEN_APPROACH_SELLIN_BY_DAY) * $factor));
+        if ($this->sellin == 0) {
+            $quality = 0;
+        } else {
+            $quality = $this->quality + ((self::INCREASE_QUALITY_UNITS_WHEN_APPROACH_SELLIN_BY_DAY) * $factor);
+        }
+
+        $this->set_quality($quality);
     }
 
 }
