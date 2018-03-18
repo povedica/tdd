@@ -20,7 +20,7 @@ final class GildedRoses
         return self::$instance;
     }
 
-    public function add_item(_Item $item)
+    public function add_item(\GildedRoses\Item $item)
     {
         array_push($this->items, $item);
     }

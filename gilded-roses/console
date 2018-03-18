@@ -7,5 +7,5 @@ use GildedRoses\GildedRoses_Command;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
-$application->add(new \GildedRoses\GildedRoses_Command());
+$application->add(new \GildedRoses\GildedRosesCommand());
 $application->run();
