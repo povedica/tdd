@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+# example by: https://github.com/luisrovirosa/katas-php/blob/master/gilded-rose/console
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use GildedRoses\GildedRoses_Command;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new \GildedRoses\GildedRosesCommand());
+$application->run();
