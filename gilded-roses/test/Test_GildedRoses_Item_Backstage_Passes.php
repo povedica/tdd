@@ -10,7 +10,7 @@ require_once '../GildedRoses_Item_Backstage_Passes.php';
  */
 class Test_GildedRoses_Item_Backstage_Passes extends TestCase
 {
-    /** @var GildedRoses_Item */
+    /** @var GildedRoses_Item_Backstage_Passes */
     private $item;
 
     public function setUp()

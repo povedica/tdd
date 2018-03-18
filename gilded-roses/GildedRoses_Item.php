@@ -11,13 +11,20 @@ class GildedRoses_Item
 
     public function __construct($sellin, $quality)
     {
-        $this->sellin = $sellin;
+        $this->set_sellin($sellin);
         $this->set_quality($quality);
+    }
+
+    public function set_sellin($sellin)
+    {
+        $this->sellin = $sellin;
+        $this->sellin = ($this->sellin < 0) ? 0 : $this->sellin;
     }
 
     public function decrease_sellin()
     {
-        $this->sellin = $this->sellin - self::DECREASE_SELLIN_UNITS_BY_DAY;
+        $this->set_sellin($this->sellin - self::DECREASE_SELLIN_UNITS_BY_DAY);
+        $this->update_quality();
     }
 
     public function set_quality($quality)

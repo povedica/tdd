@@ -10,7 +10,7 @@ require_once '../GildedRoses_Item_Sulfura.php';
  */
 class Test_GildedRoses_Item_Sulfura extends TestCase
 {
-    /** @var GildedRoses_Item */
+    /** @var GildedRoses_Item_Sulfura */
     private $item;
 
     public function setUp()

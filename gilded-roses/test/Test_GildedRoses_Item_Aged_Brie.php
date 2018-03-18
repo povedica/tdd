@@ -10,12 +10,12 @@ require_once '../GildedRoses_Item_Aged_Brie.php';
  */
 class Test_GildedRoses_Item_Aged_Brie extends TestCase
 {
-    /** @var GildedRoses_Item */
+    /** @var GildedRoses_Item_Aged_Brie */
     private $item;
 
     public function setUp()
     {
-        $this->item = new GildedRoses_Item_Backstage_Passes(10, 10);
+        $this->item = new GildedRoses_Item_Aged_Brie(10, 10);
     }
 
     public function test_if_aged_brie_quality_increase_quality_as_it_gets_older()

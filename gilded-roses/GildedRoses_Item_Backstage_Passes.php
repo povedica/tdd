@@ -10,7 +10,7 @@ class GildedRoses_Item_Backstage_Passes extends GildedRoses_Item
 
     public function decrease_sellin()
     {
-        $this->sellin = $this->sellin - self::DECREASE_QUALITY_UNITS_BY_DAY;
+        $this->set_sellin($this->sellin - self::DECREASE_QUALITY_UNITS_BY_DAY);
         $this->update_quality();
     }
 
