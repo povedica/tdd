@@ -1,6 +1,7 @@
 <?php
+namespace GildedRoses\Item;
 
-class GildedRoses_Item_Backstage_Passes extends GildedRoses_Item
+class BackstagePasses extends \GildedRoses\Item
 {
     const INCREASE_QUALITY_UNITS_WHEN_APPROACH_SELLIN_BY_DAY = 1;
     const INCREASE_QUALITY_FACTOR_WHEN_LESS_THAN_11_DAYS_SELLIN_BY_DAY = 2;

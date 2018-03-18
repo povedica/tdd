@@ -1,6 +1,7 @@
 <?php
+namespace GildedRoses\Item;
 
-class GildedRoses_Item_Sulfura extends GildedRoses_Item
+class Sulfura extends \GildedRoses\Item
 {
     public function __construct($quality)
     {

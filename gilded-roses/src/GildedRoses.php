@@ -1,4 +1,5 @@
 <?php
+namespace GildedRoses;
 
 final class GildedRoses
 {
@@ -19,7 +20,7 @@ final class GildedRoses
         return self::$instance;
     }
 
-    public function add_item(GildedRoses_Item $item)
+    public function add_item(_Item $item)
     {
         array_push($this->items, $item);
     }

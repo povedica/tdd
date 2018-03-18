@@ -1,6 +1,7 @@
 <?php
+namespace GildedRoses\Item;
 
-class GildedRoses_Item_Aged_Brie extends GildedRoses_Item
+class AgedBrie extends \GildedRoses\Item
 {
     const INCREASE_QUALITY_UNITS_WHEN_SELLIN_DECREASE = 1;
 

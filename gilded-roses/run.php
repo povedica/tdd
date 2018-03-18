@@ -1,8 +1,7 @@
 <?php
-require_once 'GildedRoses_Item.php';
-require_once 'GildedRoses_Item_Aged_Brie.php';
-require_once 'GildedRoses_Item_Sulfura.php';
-require_once 'GildedRoses_Item_Backstage_Passes.php';
+require_once 'Item.phponce '_Item_AgedBrie.php';
+require_once '_Item_Sulfura.php';
+require_once '_Item_Backstage_Passes.php';
 require_once 'GildedRoses.php';
 
 $stock = GildedRoses::instance();

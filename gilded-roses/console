@@ -1,16 +1,11 @@
 #!/usr/bin/env php
+# example by: https://github.com/luisrovirosa/katas-php/blob/master/gilded-rose/console
 <?php
 require __DIR__ . '/vendor/autoload.php';
-require_once 'GildedRoses_Item.php';
-require_once 'GildedRoses_Item_Aged_Brie.php';
-require_once 'GildedRoses_Item_Sulfura.php';
-require_once 'GildedRoses_Item_Backstage_Passes.php';
-require_once 'GildedRoses.php';
-require_once 'GildedRoses_Command.php';
 
-//use GildedRose\GildedRoses_Command;
+use GildedRoses\GildedRoses_Command;
 use Symfony\Component\Console\Application;
 
 $application = new Application();
-$application->add(new GildedRoses_Command());
+$application->add(new \GildedRoses\GildedRoses_Command());
 $application->run();

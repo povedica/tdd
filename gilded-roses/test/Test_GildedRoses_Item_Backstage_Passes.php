@@ -1,21 +1,20 @@
 <?php
+namespace GildedRose\Test;
 
 use PHPUnit\Framework\TestCase;
-
-require_once '../GildedRoses_Item.php';
-require_once '../GildedRoses_Item_Backstage_Passes.php';
+use GildedRoses\GildedRoses;
 
 /**
  * Class Test_GildedRoseItem
  */
 class Test_GildedRoses_Item_Backstage_Passes extends TestCase
 {
-    /** @var GildedRoses_Item_Backstage_Passes */
+    /** @var \GildedRoses\Item\BackstagePasses */
     private $item;
 
     public function setUp()
     {
-        $this->item = new GildedRoses_Item_Backstage_Passes(10, 10);
+        $this->item = new \GildedRoses\Item\BackstagePasses(10, 10);
     }
 
     /**
@@ -23,9 +22,9 @@ class Test_GildedRoses_Item_Backstage_Passes extends TestCase
      * @param $expected
      * @dataProvider provider_data_for_test_backstages_pases_increase_value_as_its_sellin_approaches
      */
-    public function test_backstages_pases_increase_value_as_its_sellin_approaches($n,$expected)
+    public function test_backstages_pases_increase_value_as_its_sellin_approaches($n, $expected)
     {
-        $this->item = new GildedRoses_Item_Backstage_Passes($n, $n);
+        $this->item = new \GildedRoses\Item\BackstagePasses($n, $n);
         $this->item->decrease_sellin();
         $this->assertEquals($expected, $this->item->get_quality());
     }
@@ -35,17 +34,18 @@ class Test_GildedRoses_Item_Backstage_Passes extends TestCase
      * @param $expected
      * @dataProvider provider_data_for_test_backstages_pases_increase_value_by_three_when_less_than_6_days_to_sellin
      */
-    public function test_backstages_pases_increase_value_by_three_when_less_than_6_days_to_sellin($n,$expected)
+    public function test_backstages_pases_increase_value_by_three_when_less_than_6_days_to_sellin($n, $expected)
     {
-        $this->item = new GildedRoses_Item_Backstage_Passes($n, $n);
+        $this->item = new \GildedRoses\Item\BackstagePasses($n, $n);
         $this->item->decrease_sellin();
         $this->assertEquals($expected, $this->item->get_quality());
     }
 
-    public function test_quality_drops_to_zero_when_sellin_has_passed(){
-        $this->item = new GildedRoses_Item_Backstage_Passes(1,10);
+    public function test_quality_drops_to_zero_when_sellin_has_passed()
+    {
+        $this->item = new \GildedRoses\Item\BackstagePasses(1, 10);
         $this->item->decrease_sellin();
-        $this->assertEquals(0,$this->item->get_quality());
+        $this->assertEquals(0, $this->item->get_quality());
     }
 
     /**

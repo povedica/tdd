@@ -1,6 +1,7 @@
 <?php
+namespace GildedRoses;
 
-class GildedRoses_Item
+class Item
 {
     protected $sellin;
     protected $quality;

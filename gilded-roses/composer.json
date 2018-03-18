@@ -1,5 +1,11 @@
 {
-    "require": {
-        "symfony/console": "^4.0"
+  "autoload": {
+    "psr-4": {
+      "GildedRoses\\": "src",
+      "GildedRoses\\Test\\": "test"
     }
+  },
+  "require": {
+    "symfony/console": "^4.0"
+  }
 }
