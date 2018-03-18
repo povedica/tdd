@@ -5,6 +5,7 @@ use PHPUnit\Framework\TestCase;
 require_once '../GildedRoses_Item.php';
 require_once '../GildedRoses_Item_Aged_Brie.php';
 require_once '../GildedRoses_Item_Sulfura.php';
+require_once '../GildedRoses_Item_Backstage_Passes.php';
 
 /**
  * Class Test_GildedRoseItem
@@ -59,8 +60,33 @@ class Test_GildedRoses_Item extends TestCase
         $this->assertEquals(50, $this->item->get_quality());
     }
 
-    public function test_sulfuras_item_never_decrease_sellin(){
+    public function test_sulfuras_item_never_decrease_sellin()
+    {
         $this->item = new GildedRoses_Item_Sulfura(10);
-        $this->assertEquals(10,$this->item->get_quality());
+        $this->assertEquals(10, $this->item->get_quality());
+    }
+
+    /**
+     * @param $n
+     * @param $expected
+     * @dataProvider providerTestCases
+     */
+    public function test_backstages_pases_increase_value_as_its_sellin_approaches($n,$expected)
+    {
+        $this->item = new GildedRoses_Item_Backstage_Passes($n, $n);
+        $this->item->decrease_sellin();
+        $this->assertEquals($expected, $this->item->get_quality());
+    }
+
+    /**
+     * Provide set of data to test cases
+     * @return array
+     */
+    public function providerTestCases()
+    {
+        return array(
+            array(10, 12),
+            array(11, 12)
+        );
     }
 }
