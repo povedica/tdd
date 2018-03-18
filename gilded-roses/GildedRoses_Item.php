@@ -31,7 +31,7 @@ class GildedRoses_Item
         $this->quality = $quality;
     }
 
-    public function decrease_quality()
+    public function update_quality()
     {
         $multiplier_factor = ($this->get_sellin() <= 0) ? self::MULTIPLIER_FACTOR_WHEN_SELLIN_HAS_PASSED : self::DECREASE_QUALITY_UNITS_BY_DAY;
         $this->set_quality($this->quality - ((self::DECREASE_QUALITY_UNITS_BY_DAY) * $multiplier_factor));

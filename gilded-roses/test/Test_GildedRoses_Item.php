@@ -4,6 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 require_once '../GildedRoses_Item.php';
 require_once '../GildedRoses_Item_Aged_Brie.php';
+require_once '../GildedRoses_Item_Sulfura.php';
 
 /**
  * Class Test_GildedRoseItem
@@ -27,21 +28,21 @@ class Test_GildedRoses_Item extends TestCase
 
     public function test_decrease_one_unit_quality_is_ok()
     {
-        $this->item->decrease_quality();
+        $this->item->update_quality();
         $this->assertEquals(9, $this->item->get_quality());
     }
 
     public function test_decrease_twice_faster_if_sellin_has_passed()
     {
         $this->item = new GildedRoses_Item(0, 10);
-        $this->item->decrease_quality();
+        $this->item->update_quality();
         $this->assertEquals(8, $this->item->get_quality());
     }
 
     public function test_quality_is_never_negative()
     {
         $this->item = new GildedRoses_Item(10, -1);
-        $this->item->decrease_quality();
+        $this->item->update_quality();
         $this->assertEquals(0, $this->item->get_quality());
     }
 
@@ -56,5 +57,10 @@ class Test_GildedRoses_Item extends TestCase
     {
         $this->item = new GildedRoses_Item_Aged_Brie(10, 51);
         $this->assertEquals(50, $this->item->get_quality());
+    }
+
+    public function test_sulfuras_item_never_decrease_sellin(){
+        $this->item = new GildedRoses_Item_Sulfura(10);
+        $this->assertEquals(10,$this->item->get_quality());
     }
 }
