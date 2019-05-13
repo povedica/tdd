@@ -2,8 +2,6 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once '../FizzBuzz.php';
-
 /**
  * Class Test_FizzBuzz
  */
@@ -14,7 +12,7 @@ class Test_FizzBuzz extends TestCase
      */
     private $fizzbuzz;
 
-    public function setUp()
+    public function setUp():void
     {
         $this->fizzbuzz = new FizzBuzz();
     }
