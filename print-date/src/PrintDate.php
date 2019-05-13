@@ -1,9 +1,15 @@
 <?php
 
+namespace PrintDate;
+
 class PrintDate
 {
     public function printCurrentDate()
     {
-        echo date("Y-m-d H:i:s");
+        echo $this->getCurrentDate();
+    }
+
+    public function getCurrentDate(){
+        return date('Y-m-d H:i:s');
     }
 }

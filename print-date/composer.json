@@ -1,11 +1,8 @@
 {
   "autoload": {
     "psr-4": {
-      "GildedRoses\\": "src",
-      "GildedRoses\\Test\\": "test"
+      "PrintDate\\": "src",
+      "PrintDate\\Test\\": "test"
     }
-  },
-  "require": {
-    "symfony/console": "^4.0"
   }
 }

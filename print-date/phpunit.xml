@@ -10,9 +10,8 @@
         convertNoticesToExceptions="true"
         convertWarningsToExceptions="true"
         forceCoversAnnotation="false">
-
     <testsuites>
-        <testsuite name="GildedRoses">
+        <testsuite name="PrintDate">
             <directory suffix=".php">test/</directory>
         </testsuite>
     </testsuites>

@@ -1,11 +1,9 @@
 <?php
 
-namespace PrintDate;
+namespace PrintDate\Test;
 
-class PrintDate
-{
-    public function printCurrentDate()
-    {
-        echo date("Y-m-d H:i:s");
-    }
+class PrintDateTest {
+	public function getCurrentDate() {
+		return '2018-03-20 14:00:00';
+	}
 }
