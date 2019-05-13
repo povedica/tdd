@@ -12,8 +12,8 @@
         forceCoversAnnotation="false">
 
     <testsuites>
-        <testsuite name="Bank Account">
-            <file>Test_Bank_Account.php</file>
+        <testsuite name="Luhn test">
+            <file>Test_Luhn.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
