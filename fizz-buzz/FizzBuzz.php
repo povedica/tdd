@@ -16,7 +16,6 @@ class FizzBuzz
             $number = 'Buzz';
         }
 
-
         return $number;
     }
 
